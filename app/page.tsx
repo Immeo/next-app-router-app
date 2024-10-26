@@ -1,8 +1,9 @@
+import Htag from '@/components/Htag/Htag';
+
 export default function Home() {
 	return (
 		<div>
-			<h1>Home</h1>
-			<p>Welcome to the home page!</p>
+			<Htag tag='h1'>Nекст</Htag>
 		</div>
 	);
 }
