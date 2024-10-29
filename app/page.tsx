@@ -1,10 +1,11 @@
 import Button from '@/components/Button/Button';
 import Htag from '@/components/Htag/Htag';
 import PTag from '@/components/PTag/PTag';
+import VariableTag from '@/components/VariableTag/VariableTag';
 
 export default function Home() {
 	return (
-		<div>
+		<>
 			<Htag tag='h1'>Nекст</Htag>
 			<Button appearance='primary' className='test' arrowSvg='down'>
 				primary
@@ -12,7 +13,7 @@ export default function Home() {
 			<Button appearance='ghost' arrowSvg='right'>
 				ghost
 			</Button>
-			<PTag size='s'>
+			<PTag size='l'>
 				Принимая во внимание показатели успешности, дальнейшее развитие
 				различных форм деятельности предполагает независимые способы реализации
 				анализа существующих паттернов поведения. Приятно, граждане, наблюдать,
@@ -42,6 +43,18 @@ export default function Home() {
 				предпосылок! Мы вынуждены отталкиваться от того, что существующая теория
 				способствует подготовке и реализации модели развития.
 			</PTag>
-		</div>
+			<VariableTag size='s' color='ghost'>
+				ghost
+			</VariableTag>
+			<VariableTag size='m' color='red'>
+				red
+			</VariableTag>
+			<VariableTag size='m' color='green'>
+				green
+			</VariableTag>
+			<VariableTag size='s' color='primary'>
+				primary
+			</VariableTag>
+		</>
 	);
 }
