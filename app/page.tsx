@@ -1,3 +1,4 @@
+import { Rating } from '@/components';
 import Button from '@/components/Button/Button';
 import Htag from '@/components/Htag/Htag';
 import PTag from '@/components/PTag/PTag';
@@ -46,15 +47,7 @@ export default function Home() {
 			<VariableTag size='s' color='ghost'>
 				ghost
 			</VariableTag>
-			<VariableTag size='m' color='red'>
-				red
-			</VariableTag>
-			<VariableTag size='m' color='green'>
-				green
-			</VariableTag>
-			<VariableTag size='s' color='primary'>
-				primary
-			</VariableTag>
+			<Rating isEditable={true} rating={4} />
 		</>
 	);
 }
