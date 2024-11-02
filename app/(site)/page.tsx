@@ -1,7 +1,7 @@
 import Button from '@/app/components/Button/Button';
 import Htag from '@/app/components/Htag/Htag';
+import RatingRedser from '@/app/components/Rating/RatingRedser';
 import VariableTag from '@/app/components/VariableTag/VariableTag';
-import RatingRedser from './components/Rating/RatingRedser';
 
 export default function Home() {
 	// const { rating, setRating } = useStateRating(4);

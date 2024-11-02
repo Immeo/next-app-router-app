@@ -1,5 +1,8 @@
 import type { Metadata } from 'next';
 import { Noto_Sans_KR } from 'next/font/google';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
+import Sidebar from './components/Sidebar/Sidebar';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -19,7 +22,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={font_Noto_Sans_KR.className}>{children}</body>
+			<body className={font_Noto_Sans_KR.className}>
+				<Header /> <Sidebar /> {children} <Footer />
+			</body>
 		</html>
 	);
 }
