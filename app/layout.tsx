@@ -4,6 +4,7 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Sidebar from './components/Sidebar/Sidebar';
 import './globals.css';
+import styles from './layout.module.css';
 
 export const metadata: Metadata = {
 	title: 'Create Next App',
@@ -23,7 +24,12 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body className={font_Noto_Sans_KR.className}>
-				<Header /> <Sidebar /> {children} <Footer />
+				<div className={styles.wrapper}>
+					<Header className={styles.header} />
+					<Sidebar className={styles.sidebar} />
+					<div className={styles.body}>{children}</div>
+					<Footer className={styles.footer} />
+				</div>
 			</body>
 		</html>
 	);
