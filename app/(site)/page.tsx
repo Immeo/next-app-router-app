@@ -1,12 +1,9 @@
-import { getMenu } from '@/api/menu';
 import Button from '@/app/components/Button/Button';
 import Htag from '@/app/components/Htag/Htag';
 import RatingRedser from '@/app/components/Rating/RatingRedser';
 import VariableTag from '@/app/components/VariableTag/VariableTag';
 
 export default async function Home() {
-	const menu = await getMenu(0);
-
 	return (
 		<>
 			<Htag tag='h1'>Nекст</Htag>
@@ -21,11 +18,6 @@ export default async function Home() {
 				ghost
 			</VariableTag>
 			<RatingRedser />
-			<ul>
-				{menu.map(m => (
-					<li key={m._id.secondCategory}>{m._id.secondCategory}</li>
-				))}
-			</ul>
 		</>
 	);
 }
