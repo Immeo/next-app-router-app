@@ -2,6 +2,7 @@ import { getMenu } from '@/api/menu';
 import { IFirstLevelMenuItem, IPageItem } from '@/interface/menu.interface';
 import { TopLevelCategory } from '@/interface/pages.interfase';
 import cn from 'classnames';
+import Link from 'next/link';
 import BookIcon from '../../../helpers/icons/books.svg';
 import CourssIcon from '../../../helpers/icons/courses.svg';
 import ProductIcon from '../../../helpers/icons/products.svg';
@@ -44,7 +45,7 @@ async function Menu() {
 				{firstLevelMenu.map(m => {
 					return (
 						<div key={m.route}>
-							<a href={`/${m.route}`}>
+							<Link href={`/${m.route}`}>
 								<div
 									className={cn(styles.firstLevel, {
 										[styles.active]: m.id === 0
@@ -53,7 +54,7 @@ async function Menu() {
 									{m.icon}
 									<span>{m.name}</span>
 								</div>
-							</a>
+							</Link>
 							{m.id === 0 && buildSecondLevel(m)}
 						</div>
 					);
